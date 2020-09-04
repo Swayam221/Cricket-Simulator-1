@@ -41,10 +41,10 @@ public:
 	}
 
 	bool canBall() {
-		if (strcmp(role, "Ball") == 0 || strcmp(role, "Both")) {
-			return true;
+		if (strcmp(role, "Bat") == 0) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	~Player();
