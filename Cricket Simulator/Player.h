@@ -12,16 +12,16 @@ class Player
 	int wickets;
 	int ones;
 public:
-	char name[50];
-	char role[10];
+	string name;
+	string role;
 	float pFours;
 	float pSixes;
 	float pOnes;
 	float pWicket;
 	float pZero;
-	Player(char nm[], char rol[], int rns, float sr, int frs, int sxs, int bls, int wkts) {
-		strcpy_s(name, 50, nm);
-		strcpy_s(role, 10, rol);
+	Player(string nm, string rol, int rns, float sr, int frs, int sxs, int bls, int wkts) {
+		name = nm;
+		role = rol;
 		totalRuns = rns;
 		strikeRate = sr;
 		fours = frs;
@@ -41,7 +41,7 @@ public:
 	}
 
 	bool canBall() {
-		if (strcmp(role, "Bat") == 0) {
+		if (role != "Bat") {
 			return false;
 		}
 		return true;

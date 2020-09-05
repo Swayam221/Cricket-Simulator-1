@@ -1,0 +1,19 @@
+﻿  Team.cpp
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(31,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(32,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(33,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(35,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(36,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(39,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(43,17): error C2374: 'temp2': redefinition; multiple initialization
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(39): message : see declaration of 'temp2'
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(44,10): error C2088: '>>': illegal for class
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(47,17): error C2374: 'temp2': redefinition; multiple initialization
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(39): message : see declaration of 'temp2'
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(48,10): error C2088: '>>': illegal for class
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(51,17): error C2374: 'temp2': redefinition; multiple initialization
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(39): message : see declaration of 'temp2'
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(52,10): error C2088: '>>': illegal for class
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(55,17): error C2374: 'temp2': redefinition; multiple initialization
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(39): message : see declaration of 'temp2'
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Team.h(56,10): error C2088: '>>': illegal for class
