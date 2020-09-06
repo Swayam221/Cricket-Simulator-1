@@ -1,6 +1,7 @@
-# include <string.h>
-# include <stdio.h>
+# include <string>
 # include <math.h>
+///using namespace std;
+
 class Player
 {
 	int totalRuns;
@@ -12,14 +13,14 @@ class Player
 	int wickets;
 	int ones;
 public:
-	string name;
-	string role;
+	std::string name;
+	std::string role;
 	float pFours;
 	float pSixes;
 	float pOnes;
 	float pWicket;
 	float pZero;
-	Player(string nm, string rol, int rns, float sr, int frs, int sxs, int bls, int wkts) {
+	Player(std::string nm, std::string rol, int rns, float sr, int frs, int sxs, int bls, int wkts) {
 		name = nm;
 		role = rol;
 		totalRuns = rns;
