@@ -1,3 +1,4 @@
+#pragma once
 # include <string>
 # include <math.h>
 ///using namespace std;
@@ -8,7 +9,7 @@ class Player
 	float strikeRate;
 	int fours;
 	int sixes;
-	int balls;
+	int ballsThrown;
 	int ballsPlayed;
 	int wickets;
 	int ones;
@@ -27,7 +28,7 @@ public:
 		strikeRate = sr;
 		fours = frs;
 		sixes = sxs;
-		balls = bls;
+		ballsThrown = bls;
 		wickets = wkts;
 		ballsPlayed = totalRuns / (strikeRate / 100);
 		pFours = (fours * 1.0) / ballsPlayed;
@@ -35,18 +36,18 @@ public:
 		ones = (totalRuns - (fours * 4) - (sixes * 6));
 		pOnes = (ones * 1.0) / ballsPlayed;
 		pZero = ((ballsPlayed - fours - sixes- ones)*1.0)/ballsPlayed;
-		if (balls != 0)
+		if (ballsThrown != 0)
 		{
-			pWicket = wickets * 1.0 / balls;
+			pWicket = wickets * 1.0 / ballsThrown;
 		}
 	}
 
 	bool canBall() {
 		if (role != "Bat") {
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 	}
 
-	~Player();
+	//~Player();
 };

@@ -1,2 +1,30 @@
-﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\vasu2\Desktop\Cricket Simulator\Debug\Cricket Simulator.exe : fatal error LNK1120: 1 unresolved externals
+﻿  Match.cpp
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(33,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(34,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(35,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(37,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(38,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(41,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Player.cpp
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(33,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(34,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(35,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(37,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(38,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(41,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Source.cpp
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(33,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(34,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(35,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(37,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(38,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(41,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Team.cpp
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(33,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(34,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(35,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(37,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(38,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(41,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  Cricket Simulator.vcxproj -> C:\Users\vasu2\Desktop\Cricket Simulator\Debug\Cricket Simulator.exe

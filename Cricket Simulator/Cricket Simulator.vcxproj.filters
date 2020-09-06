@@ -24,9 +24,6 @@
     <ClInclude Include="Match.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tester.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -38,7 +35,7 @@
     <ClCompile Include="Match.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tester.cpp">
+    <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
