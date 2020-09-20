@@ -1,7 +1,7 @@
 #pragma once
 # include <string>
-# include <math.h>
-///using namespace std;
+#include <iostream>
+#include <time.h>
 
 class Player
 {
@@ -49,5 +49,13 @@ public:
 		return false;
 	}
 
-	//~Player();
+	bool takesWicket() {
+		int nPWicket = pWicket * 1000;
+		int randomNumber;
+		randomNumber = (rand() % 1000) ;
+		if (randomNumber < nPWicket) {
+			return true;
+		}
+		return false;
+	}
 };

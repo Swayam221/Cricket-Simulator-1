@@ -14,17 +14,20 @@ void testPlayer(Player player) {
 	cout << player.pSixes << "\t";
 	cout << player.pZero << "\t";
 	cout << player.pWicket << "\t";
+	cout << player.takesWicket() << "\t";
 	cout << player.canBall() << "\n";
+	cout << "\n";
 }
 
 void testTeam(Team team) {
-	while (!team.balling.empty()) {
-		testPlayer(team.balling.front());
-		team.balling.pop();
+	while (!team.bowling.empty()) {
+		testPlayer(team.bowling.front());
+		team.bowling.pop();
 	}
 }
 
 int main() {
+	srand((unsigned)time(0));
 	testTeam(Team("MI"));
 	//testPlayer(player);
 

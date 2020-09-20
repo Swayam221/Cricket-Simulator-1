@@ -23,7 +23,7 @@ class Team {
 public:
 	string name;
 	queue <Player> batting;
-	queue <Player> balling;
+	queue <Player> bowling;
 
 	Team(){}
 	Team(string teamName) {
@@ -62,7 +62,7 @@ public:
 
 			Player player(playerName, role, playerRuns, strikeRate, fours, sixes, balls, wickets);
 			batting.push(player);
-			if (player.canBall()) { balling.push(player); }
+			if (player.canBall()) { bowling.push(player); }
 		}
 
 
