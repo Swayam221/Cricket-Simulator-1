@@ -1,5 +1,5 @@
 #pragma once
-# include <string>
+#include <string>
 #include <iostream>
 #include <time.h>
 
@@ -31,14 +31,14 @@ public:
 		ballsThrown = bls;
 		wickets = wkts;
 		ballsPlayed = totalRuns / (strikeRate / 100);
-		pFours = (fours * 1.0) / ballsPlayed;
-		pSixes = (sixes * 1.0) / ballsPlayed;
+		pFours = ((fours * 1.0) / ballsPlayed)*1000;
+		pSixes = ((sixes * 1.0) / ballsPlayed) * 1000;
 		ones = (totalRuns - (fours * 4) - (sixes * 6));
-		pOnes = (ones * 1.0) / ballsPlayed;
-		pZero = ((ballsPlayed - fours - sixes- ones)*1.0)/ballsPlayed;
+		pOnes = ((ones * 1.0) / ballsPlayed) * 1000;
+		pZero = (((ballsPlayed - fours - sixes- ones)*1.0)/ballsPlayed) * 1000;
 		if (ballsThrown != 0)
 		{
-			pWicket = wickets * 1.0 / ballsThrown;
+			pWicket = (wickets * 1.0 / ballsThrown) * 1000;
 		}
 	}
 
@@ -50,12 +50,29 @@ public:
 	}
 
 	bool takesWicket() {
-		int nPWicket = pWicket * 1000;
-		int randomNumber;
-		randomNumber = (rand() % 1000) ;
-		if (randomNumber < nPWicket) {
+		int randomNumber = (rand() % 1000) ;
+		if (randomNumber < pWicket) {
 			return true;
 		}
 		return false;
+	}
+
+	int bats() {
+		int cum0 = pZero;
+		int cum1 = cum0 + pOnes;
+		int cum4 = cum1 + pFours;
+		int cum6 = cum4 + pSixes;
+
+		int rN = (rand() % cum6);
+		if (rN < cum0) {
+			return 0;
+		}
+		else if (rN < cum1) {
+			return 1;
+		}
+		else if (rN < cum4) {
+			return 4;
+		}
+		return 6;
 	}
 };
