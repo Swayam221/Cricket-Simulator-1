@@ -39,8 +39,7 @@ public:
 				{
 					curBatsman = &batsman1;
 				}
-
-				//team1.bowling.push(bowler);
+				
 				bowler = team1.bowling.front();
 				team1.bowling.pop();
 				team1.bowling.push(bowler);
