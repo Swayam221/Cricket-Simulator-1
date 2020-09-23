@@ -2,6 +2,7 @@
 #include "Player.h"
 #include <iostream>
 #include "Team.h"
+#include "Match.h"
 using namespace std;
 
 //Player player("Rohit Sharma", "Bat", 4898, 130.82, 431, 194, 0, 0);
@@ -39,12 +40,29 @@ void testBats(Player player) {
 	cout << "\n";
 }
 
+void testMatch() {
+	Match match1("MI", "CSK");
+	match1.play();
+	cout << match1.team1.runsScored << "\n";
+	cout << match1.team2.runsScored << "\n";
+	cout << match1.team1.wicketsLost << "\n";
+	cout << match1.team2.wicketsLost << "\n";
+
+	Match match2("CSK", "MI");
+	match2.play();
+	cout << match2.team1.runsScored << "\n";
+	cout << match2.team2.runsScored << "\n";
+	cout << match2.team1.wicketsLost << "\n";
+	cout << match2.team2.wicketsLost << "\n";
+}
+
 int main() {
 	srand((unsigned)time(0));
 	//testTeam(Team("MI"));
 	//testPlayer(player);
 	//testTakesWicket(player);
 	//testBats(player);
+	testMatch();
 
 	return 0;
 }

@@ -1,13 +1,12 @@
 ﻿  Tester.cpp
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(36,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(37,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(38,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(40,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(41,72): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(44,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(64,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(65,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(66,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(67,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Tester.cpp(7,67): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(40,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(41,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(42,42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(44,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(45,72): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(48,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(68,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(69,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(70,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\vasu2\Desktop\Cricket Simulator\Cricket Simulator\Player.h(71,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Cricket Simulator.vcxproj -> C:\Users\vasu2\Desktop\Cricket Simulator\Debug\Cricket Simulator.exe
