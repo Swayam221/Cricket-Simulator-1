@@ -2,10 +2,11 @@
 #include "Player.h"
 #include <iostream>
 #include "Team.h"
+#include "Match.h"
 using namespace std;
 
 //Player player("Rohit Sharma", "Bat", 4898, 130.82, 431, 194, 0, 0);
-Player player("Lasith Malinga", "Ball", 88, 88.88, 6, 5, 2827, 170);
+//Player player("Lasith Malinga", "Ball", 88, 88.88, 6, 5, 2827, 170);
 
 void testPlayer(Player player) {
 	cout << player.name << "\t";
@@ -39,13 +40,33 @@ void testBats(Player player) {
 	cout << "\n";
 }
 
+void testMatch() {
+	Team mi("MI");
+	Team csk("CSK");
+	Team* mip = &mi;
+	Team* cskp = &csk;
+	Match match1(mip, cskp);
+	match1.play();
+	cout << match1.team1->runsScored << "\n";
+	cout << match1.team2->runsScored << "\n";
+	cout << match1.team1->wicketsLost << "\n";
+	cout << match1.team2->wicketsLost << "\n";
+
+	Match match2(cskp, mip);
+	match2.play();
+	cout << match2.team1->runsScored << "\n";
+	cout << match2.team2->runsScored << "\n";
+	cout << match2.team1->wicketsLost << "\n";
+	cout << match2.team2->wicketsLost << "\n";
+}
+
 int main() {
 	srand((unsigned)time(0));
 	//testTeam(Team("MI"));
 	//testPlayer(player);
 	//testTakesWicket(player);
 	//testBats(player);
+	testMatch();
 
 	return 0;
 }
-

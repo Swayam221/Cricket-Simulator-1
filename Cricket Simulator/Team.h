@@ -19,16 +19,19 @@ class Team {
 	int balls;
 	int wickets;
 	string temp;
-	
+
 public:
 	string name;
 	queue <Player> batting;
 	queue <Player> bowling;
 
-	Team(){}
+	int runsScored = 0;
+	int wicketsLost = 0;
+
+	Team() {}
 	Team(string teamName) {
 		name = teamName;
-		teamFile.open(teamName + ".csv" );
+		teamFile.open(teamName + ".csv");
 
 		getline(teamFile, line, '\n');
 
@@ -36,7 +39,7 @@ public:
 			stringstream ss(line);
 			getline(ss, playerName, ',');
 			getline(ss, role, ',');
-			getline(ss, temp, ',');  
+			getline(ss, temp, ',');
 			stringstream temp2(temp);
 			temp2 >> playerRuns;
 
@@ -69,4 +72,3 @@ public:
 		teamFile.close();
 	}
 };
-

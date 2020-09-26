@@ -21,6 +21,12 @@ public:
 	float pOnes;
 	float pWicket;
 	float pZero;
+
+	int runsScored = 0;
+	int wicketsTaken = 0;
+
+	Player() {}
+
 	Player(std::string nm, std::string rol, int rns, float sr, int frs, int sxs, int bls, int wkts) {
 		name = nm;
 		role = rol;
@@ -31,11 +37,11 @@ public:
 		ballsThrown = bls;
 		wickets = wkts;
 		ballsPlayed = totalRuns / (strikeRate / 100);
-		pFours = ((fours * 1.0) / ballsPlayed)*1000;
+		pFours = ((fours * 1.0) / ballsPlayed) * 1000;
 		pSixes = ((sixes * 1.0) / ballsPlayed) * 1000;
 		ones = (totalRuns - (fours * 4) - (sixes * 6));
 		pOnes = ((ones * 1.0) / ballsPlayed) * 1000;
-		pZero = (((ballsPlayed - fours - sixes- ones)*1.0)/ballsPlayed) * 1000;
+		pZero = (((ballsPlayed - fours - sixes - ones) * 1.0) / ballsPlayed) * 1000;
 		if (ballsThrown != 0)
 		{
 			pWicket = (wickets * 1.0 / ballsThrown) * 1000;
@@ -50,7 +56,7 @@ public:
 	}
 
 	bool takesWicket() {
-		int randomNumber = (rand() % 1000) ;
+		int randomNumber = (rand() % 1000);
 		if (randomNumber < pWicket) {
 			return true;
 		}
