@@ -20,10 +20,14 @@ class Team {
 	int wickets;
 	string temp;
 
+	
+
 public:
 	string name;
-	queue <Player> batting;
-	queue <Player> bowling;
+	int bowlerInd = -1;
+	int batsmanInd = -1;
+	vector <Player> batting;
+	vector <Player> bowling;
 
 	int runsScored = 0;
 	int wicketsLost = 0;
@@ -64,11 +68,26 @@ public:
 			temp7 >> wickets;
 
 			Player player(playerName, role, playerRuns, strikeRate, fours, sixes, balls, wickets);
-			batting.push(player);
-			if (player.canBall()) { bowling.push(player); }
+			batting.push_back(player);
+			if (player.canBall()) { bowling.push_back(player); }
 		}
 
 
 		teamFile.close();
+	}
+
+	void reset() {
+		bowlerInd = -1;
+		batsmanInd = -1;
+	}
+
+	Player getBowler() {
+		bowlerInd += 1;
+		return bowling.at(bowlerInd % bowling.size());
+	}
+
+	Player getBatsman() {
+		batsmanInd += 1;
+		return batting.at(batsmanInd % batting.size());
 	}
 };

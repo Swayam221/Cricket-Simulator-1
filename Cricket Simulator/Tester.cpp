@@ -22,7 +22,7 @@ void testPlayer(Player player) {
 void testTeam(Team team) {
 	while (!team.bowling.empty()) {
 		testPlayer(team.bowling.front());
-		team.bowling.pop();
+		team.getBowler();
 	}
 }
 
@@ -60,7 +60,7 @@ void testMatch() {
 	cout << match2.team2->wicketsLost << "\n";
 }
 
-int main() {
+/*int main() {
 	srand((unsigned)time(0));
 	//testTeam(Team("MI"));
 	//testPlayer(player);
@@ -69,4 +69,4 @@ int main() {
 	testMatch();
 
 	return 0;
-}
+}*/
