@@ -20,10 +20,10 @@ public:
 		Player bowler;
 
 		Player batsman1 = team2->getBatsman();
-		cout << batsman1.name << " is batting" << "\n";
+		//cout << batsman1.name << " is batting" << "\n";
 
 		Player batsman2 = team2->getBatsman();
-		cout << batsman2.name << " is batting2" << "\n";
+		//cout << batsman2.name << " is batting2" << "\n";
 
 		Player* curBatsman = &batsman2;
 
@@ -34,25 +34,25 @@ public:
 				if (curBatsman == &batsman1)
 				{
 					curBatsman = &batsman2;
-					cout << batsman2.name << " is batting" << "\n";
+					//cout << batsman2.name << " is batting" << "\n";
 
 				}
 				else
 				{
 					curBatsman = &batsman1;
-					cout << batsman1.name << " is batting" << "\n";
+					//cout << batsman1.name << " is batting" << "\n";
 
 				}
 
 				bowler = team1->getBowler();
-				cout << bowler.name << " is bowling" << "\n";
+				//cout << bowler.name << " is bowling" << "\n";
 
 			}
 			int runs = 0;
 			if (bowler.takesWicket())
 			{
 				bowler.wicketsTaken++;
-				cout << bowler.name << " outs " << curBatsman->name << "\n";
+				//cout << bowler.name << " outs " << curBatsman->name << "\n";
 
 
 				*curBatsman = team2->getBatsman();
@@ -63,7 +63,7 @@ public:
 				runs = curBatsman->bats();
 				curBatsman->runsScored += runs;
 				team2->runsScored += runs;
-				cout << curBatsman->name << " scores " << runs<<"\n";
+				//cout << curBatsman->name << " scores " << runs<<"\n";
 				if (runs == 1)
 				{
 					if (curBatsman == &batsman1)
