@@ -72,7 +72,7 @@ public:
 
 	bool takesWicket() {
 
-		ballsBowled++;
+		//ballsBowled++;
 		int randomNumber = (rand() % 1000);
 		if (randomNumber < pWicket) {
 			return true;
@@ -86,7 +86,7 @@ public:
 		int cum4 = cum1 + pFours;
 		int cum6 = cum4 + pSixes;
 
-		ballsBatted++;
+		//ballsBatted++;
 		int rN = (rand() % cum6);
 		if (rN <= cum0) {
 			return 0;
@@ -95,10 +95,10 @@ public:
 			return 1;
 		}
 		else if (rN <= cum4) {
-			foursScored++;
+			//foursScored++;
 			return 4;
 		}
-		sixesScored++;
+		//sixesScored++;
 		return 6;
 	}
 };

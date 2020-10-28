@@ -110,4 +110,9 @@ public:
 			batting[i].runsGiven = batting[i].runsGiven / n;
 		}
 	}
+	int getAvgRunsScored(int n)
+	{
+		runsScored = runsScored / n;
+		return runsScored;
+	}
 };

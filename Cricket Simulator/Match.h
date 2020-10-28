@@ -53,18 +53,30 @@ public:
 
 			if (bowler.takesWicket())
 			{
+				bowler.ballsBowled++;
 				bowler.wicketsTaken++;
 				//cout << bowler.name << " outs " << curBatsman->name << "\n";
 
-
+				curBatsman->ballsBatted++;
 				*curBatsman = team2->getBatsman();
 				team2->wicketsLost++;
 			}
 			else
 			{
+				//batsman
 				runs = curBatsman->bats();
+				curBatsman->ballsBatted++;
+				if (runs==4)
+				curBatsman->foursScored++;
+				if (runs==6)
+				curBatsman->sixesScored++;
 				curBatsman->runsScored += runs;
+
+				//team
 				team2->runsScored += runs;
+				
+				//bowler
+				bowler.ballsBowled++;
 				bowler.runsGiven += runs;
 				//cout << curBatsman->name << " scores " << runs<<"\n";
 				if (runs == 1)
@@ -80,6 +92,8 @@ public:
 				}
 			}
 		}
+		team2->reset();
+		team1->reset();
 
 	}
 }; 
