@@ -6,25 +6,39 @@
 
 class Player
 {
+	//data from csv
 	int totalRuns;
 	float strikeRate;
 	int fours;
 	int sixes;
 	int ballsThrown;
-	int ballsPlayed;
-	int wickets;
-	int ones;
-public:
-	std::string name;
 	std::string role;
+	int wickets;
+
+	//calculated
+	int ballsPlayed;
+	int ones;
+
+	//probabilities
 	float pFours;
 	float pSixes;
 	float pOnes;
 	float pWicket;
 	float pZero;
 
+public:
+	std::string name;
+
+	//batsman
+	int foursScored = 0;
+	int sixesScored = 0;
 	int runsScored = 0;
+	int ballsBatted = 0;
+
+	//bowler
 	int wicketsTaken = 0;
+	int ballsBowled = 0;
+	int runsGiven = 0;
 
 	Player() {}
 
@@ -57,6 +71,8 @@ public:
 	}
 
 	bool takesWicket() {
+
+		ballsBowled++;
 		int randomNumber = (rand() % 1000);
 		if (randomNumber < pWicket) {
 			return true;
@@ -70,6 +86,7 @@ public:
 		int cum4 = cum1 + pFours;
 		int cum6 = cum4 + pSixes;
 
+		ballsBatted++;
 		int rN = (rand() % cum6);
 		if (rN <= cum0) {
 			return 0;
@@ -78,8 +95,10 @@ public:
 			return 1;
 		}
 		else if (rN <= cum4) {
+			foursScored++;
 			return 4;
 		}
+		sixesScored++;
 		return 6;
 	}
 };

@@ -1,28 +1,40 @@
-﻿Build started 10/10/2020 10:54:46 PM.
-     1>Project "G:\visual studio projects\Cricket Simulator\Cricket Simulator\Cricket Simulator.vcxproj" on node 2 (Build target(s)).
+﻿Build started 28-10-2020 15:16:14.
+     1>Project "C:\Users\VASU GUPTA\OneDrive\Desktop\Cricket-Simulator\Cricket Simulator\Cricket Simulator.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         G:\Visual Studio Ultimate\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm1.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Match.cpp
+         Match.cpp
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(54): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(55): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(56): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(58): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(59): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(62): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(84): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(85): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(86): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(87): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm1.cpp
          MyForm1.cpp
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(40): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(41): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(42): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(44): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(45): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(48): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(68): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(69): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(70): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>g:\visual studio projects\cricket simulator\cricket simulator\Player.h(71): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(54): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(55): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(56): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(58): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(59): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(62): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(84): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(85): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(86): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(87): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
      1>MyForm1.cpp(6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
        Link:
-         G:\Visual Studio Ultimate\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\visual studio projects\Cricket Simulator\Debug\Cricket Simulator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\CricketSimulator.MyForm1.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\visual studio projects\Cricket Simulator\Debug\Cricket Simulator.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\visual studio projects\Cricket Simulator\Debug\Cricket Simulator.lib" /MACHINE:X86 Debug\Match.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\VASU GUPTA\OneDrive\Desktop\Cricket-Simulator\Debug\Cricket Simulator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\CricketSimulator.MyForm1.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\VASU GUPTA\OneDrive\Desktop\Cricket-Simulator\Debug\Cricket Simulator.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\VASU GUPTA\OneDrive\Desktop\Cricket-Simulator\Debug\Cricket Simulator.lib" /MACHINE:X86 Debug\Match.obj
          Debug\MyForm1.obj
          Debug\Player.obj
          Debug\Team.obj
          Debug\Tester.obj
-         Cricket Simulator.vcxproj -> G:\visual studio projects\Cricket Simulator\Debug\Cricket Simulator.exe
-     1>Done Building Project "G:\visual studio projects\Cricket Simulator\Cricket Simulator\Cricket Simulator.vcxproj" (Build target(s)).
+         Cricket Simulator.vcxproj -> C:\Users\VASU GUPTA\OneDrive\Desktop\Cricket-Simulator\Debug\Cricket Simulator.exe
+     1>Done Building Project "C:\Users\VASU GUPTA\OneDrive\Desktop\Cricket-Simulator\Cricket Simulator\Cricket Simulator.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.32
+Time Elapsed 00:00:03.46

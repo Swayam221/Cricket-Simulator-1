@@ -49,6 +49,8 @@ public:
 
 			}
 			int runs = 0;
+			team2->ballsFaced++;
+
 			if (bowler.takesWicket())
 			{
 				bowler.wicketsTaken++;
@@ -63,6 +65,7 @@ public:
 				runs = curBatsman->bats();
 				curBatsman->runsScored += runs;
 				team2->runsScored += runs;
+				bowler.runsGiven += runs;
 				//cout << curBatsman->name << " scores " << runs<<"\n";
 				if (runs == 1)
 				{
