@@ -80,7 +80,7 @@ public:
 		return false;
 	}
 
-	int bats() {
+	int bats(int balls) {
 		int cum0 = pZero;
 		int cum1 = cum0 + pOnes;
 		int cum4 = cum1 + pFours;
@@ -88,6 +88,10 @@ public:
 
 		//ballsBatted++;
 		int rN = (rand() % cum6);
+
+		//powerplay
+		if (balls < 30) rN += 50;
+
 		if (rN <= cum0) {
 			return 0;
 		}

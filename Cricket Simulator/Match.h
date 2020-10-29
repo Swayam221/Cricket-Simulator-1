@@ -64,7 +64,7 @@ public:
 			else
 			{
 				//batsman
-				runs = curBatsman->bats();
+				runs = curBatsman->bats(balls);
 				curBatsman->ballsBatted++;
 				if (runs==4)
 				curBatsman->foursScored++;
@@ -74,6 +74,7 @@ public:
 
 				//team
 				team2->runsScored += runs;
+				team2->runsScoredIn1Match += runs;
 				
 				//bowler
 				bowler.ballsBowled++;
@@ -92,8 +93,6 @@ public:
 				}
 			}
 		}
-		team2->reset();
-		team1->reset();
 
 	}
 }; 

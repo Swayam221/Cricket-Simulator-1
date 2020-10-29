@@ -31,6 +31,9 @@ public:
 	int runsScored = 0;
 	int wicketsLost = 0;
 	int ballsFaced = 0;
+	float wins = 0;
+
+	int runsScoredIn1Match = 0;
 
 	Team() {}
 	Team(string teamName) {
@@ -80,6 +83,7 @@ public:
 	void reset() {
 		bowlerInd = -1;
 		batsmanInd = -1;
+		runsScoredIn1Match = 0;
 	}
 
 	Player getBowler() {
@@ -96,6 +100,7 @@ public:
 		runsScored = runsScored / n;
 		wicketsLost = wicketsLost / n;
 		ballsFaced = ballsFaced / n;
+		wins = wins / n;
 
 		for (int i = 0; i < 11; i++) {
 			//batsman
