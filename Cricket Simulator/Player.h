@@ -90,7 +90,7 @@ public:
 		int rN = (rand() % cum6);
 
 		//powerplay
-		if (balls < 30) rN += 50;
+		if (balls < 30) rN += 75;
 
 		if (rN <= cum0) {
 			return 0;
