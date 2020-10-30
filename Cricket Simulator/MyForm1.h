@@ -53,9 +53,25 @@ namespace CricketSimulator {
 			Team* mip = &mi;
 			Team* cskp = &csk;
 			Match match1(mip, cskp);
-			for (int i = 0; i < n; i++)
-			match1.play();
-			int score1 = match1.team2->getAvgRunsScored(n);
+			Match match2(cskp, mip);
+			for (int i = 0; i < n; i++){
+				match1.play();
+				match2.play();
+
+				if (mi.runsScoredIn1Match>csk.runsScoredIn1Match) mi.wins++;
+				else if (mi.runsScoredIn1Match < csk.runsScoredIn1Match) csk.wins++;
+
+				mi.reset();
+				csk.reset();
+			}
+			csk.getAvgResults(n);
+			mi.getAvgResults(n);
+
+			int score1 = match1.team2->runsScored;
+			int score2 = match2.team2->runsScored;
+
+			//int score1 = match1.team2->getAvgRunsScored(n);
+
 			String ^ scor1 = System::Convert::ToString(score1);
 			label3->Text = scor1;
 			//cout << match1.team1->runsScored << "\n";
@@ -63,10 +79,7 @@ namespace CricketSimulator {
 			//cout << match1.team1->wicketsLost << "\n";
 			//cout << match1.team2->wicketsLost << "\n";
 
-			Match match2(cskp, mip);
-			for (int i = 0; i < n; i++)
-			match2.play();
-			int score2 = match2.team2->getAvgRunsScored(n);
+			//int score2 = match2.team2->getAvgRunsScored(n);
 			String ^ scor2 = System::Convert::ToString(score2);
 			label4->Text = scor2;
 
