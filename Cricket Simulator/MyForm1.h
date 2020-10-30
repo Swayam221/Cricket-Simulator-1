@@ -44,7 +44,7 @@ namespace CricketSimulator {
 				delete components;
 			}
 		}
-		void testMatch(string t1, string t2) {
+		void testMatch(string t1, string t2,int n) {
 			srand((unsigned)time(0));
 			Team mi(t1);
 			Team csk(t2);
@@ -53,8 +53,25 @@ namespace CricketSimulator {
 			Team* mip = &mi;
 			Team* cskp = &csk;
 			Match match1(mip, cskp);
-			match1.play();
+			Match match2(cskp, mip);
+			for (int i = 0; i < n; i++){
+				match1.play();
+				match2.play();
+
+				if (mi.runsScoredIn1Match>csk.runsScoredIn1Match) mi.wins++;
+				else if (mi.runsScoredIn1Match < csk.runsScoredIn1Match) csk.wins++;
+
+				mi.reset();
+				csk.reset();
+			}
+			csk.getAvgResults(n);
+			mi.getAvgResults(n);
+
 			int score1 = match1.team2->runsScored;
+			int score2 = match2.team2->runsScored;
+
+			//int score1 = match1.team2->getAvgRunsScored(n);
+
 			String ^ scor1 = System::Convert::ToString(score1);
 			label3->Text = scor1;
 			//cout << match1.team1->runsScored << "\n";
@@ -62,9 +79,7 @@ namespace CricketSimulator {
 			//cout << match1.team1->wicketsLost << "\n";
 			//cout << match1.team2->wicketsLost << "\n";
 
-			Match match2(cskp, mip);
-			match2.play();
-			int score2 = match2.team2->runsScored;
+			//int score2 = match2.team2->getAvgRunsScored(n);
 			String ^ scor2 = System::Convert::ToString(score2);
 			label4->Text = scor2;
 
@@ -80,6 +95,8 @@ namespace CricketSimulator {
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::TextBox^  textBox3;
 
 	protected:
 
@@ -103,11 +120,13 @@ namespace CricketSimulator {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(89, 73);
+			this->button1->Location = System::Drawing::Point(89, 114);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(96, 31);
 			this->button1->TabIndex = 0;
@@ -117,7 +136,7 @@ namespace CricketSimulator {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(89, 21);
+			this->textBox1->Location = System::Drawing::Point(89, 62);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 20);
 			this->textBox1->TabIndex = 1;
@@ -127,7 +146,7 @@ namespace CricketSimulator {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(89, 47);
+			this->textBox2->Location = System::Drawing::Point(89, 88);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(100, 20);
 			this->textBox2->TabIndex = 2;
@@ -137,7 +156,7 @@ namespace CricketSimulator {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(53, 138);
+			this->label1->Location = System::Drawing::Point(53, 170);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(35, 13);
 			this->label1->TabIndex = 3;
@@ -146,7 +165,7 @@ namespace CricketSimulator {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(196, 138);
+			this->label2->Location = System::Drawing::Point(196, 170);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(35, 13);
 			this->label2->TabIndex = 4;
@@ -156,7 +175,7 @@ namespace CricketSimulator {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(53, 170);
+			this->label3->Location = System::Drawing::Point(53, 205);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(35, 13);
 			this->label3->TabIndex = 5;
@@ -165,17 +184,38 @@ namespace CricketSimulator {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(196, 170);
+			this->label4->Location = System::Drawing::Point(196, 205);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(35, 13);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"label4";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(87, 9);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(104, 13);
+			this->label5->TabIndex = 7;
+			this->label5->Text = L"enter no. of matches";
+			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(89, 25);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(100, 20);
+			this->textBox3->TabIndex = 8;
+			this->textBox3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 262);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
@@ -194,9 +234,11 @@ namespace CricketSimulator {
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 String ^ t1 = textBox1->Text;
 				 String ^ t2 = textBox2->Text;
+				 String ^ t3 = textBox3->Text;
+				 int n = System::Convert::ToInt32(t3);
 				 string team1 = msclr::interop::marshal_as<std::string>(t1);
 				 string team2 = msclr::interop::marshal_as<std::string>(t2);
-				 testMatch(team1, team2);
+				 testMatch(team1, team2,n);
 				 
 	}
 	private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -206,6 +248,8 @@ namespace CricketSimulator {
 	}
 	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 
 }

@@ -53,18 +53,31 @@ public:
 
 			if (bowler.takesWicket())
 			{
+				bowler.ballsBowled++;
 				bowler.wicketsTaken++;
 				//cout << bowler.name << " outs " << curBatsman->name << "\n";
 
-
+				curBatsman->ballsBatted++;
 				*curBatsman = team2->getBatsman();
 				team2->wicketsLost++;
 			}
 			else
 			{
-				runs = curBatsman->bats();
+				//batsman
+				runs = curBatsman->bats(balls);
+				curBatsman->ballsBatted++;
+				if (runs==4)
+				curBatsman->foursScored++;
+				if (runs==6)
+				curBatsman->sixesScored++;
 				curBatsman->runsScored += runs;
+
+				//team
 				team2->runsScored += runs;
+				team2->runsScoredIn1Match += runs;
+				
+				//bowler
+				bowler.ballsBowled++;
 				bowler.runsGiven += runs;
 				//cout << curBatsman->name << " scores " << runs<<"\n";
 				if (runs == 1)

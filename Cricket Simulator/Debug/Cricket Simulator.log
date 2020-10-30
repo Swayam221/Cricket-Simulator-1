@@ -1,7 +1,7 @@
-﻿Build started 28-10-2020 15:16:14.
+﻿Build started 29-10-2020 23:18:22.
      1>Project "C:\Users\VASU GUPTA\OneDrive\Desktop\Cricket-Simulator\Cricket Simulator\Cricket Simulator.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Match.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Match.cpp Player.cpp Team.cpp
          Match.cpp
      1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(54): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(55): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
@@ -13,6 +13,10 @@
      1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(85): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(86): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(87): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Team.cpp
+         Player.cpp
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm1.cpp
          MyForm1.cpp
      1>c:\users\vasu gupta\onedrive\desktop\cricket-simulator\cricket simulator\Player.h(54): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
@@ -37,4 +41,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.46
+Time Elapsed 00:00:01.88

@@ -72,7 +72,7 @@ public:
 
 	bool takesWicket() {
 
-		ballsBowled++;
+		//ballsBowled++;
 		int randomNumber = (rand() % 1000);
 		if (randomNumber < pWicket) {
 			return true;
@@ -80,14 +80,18 @@ public:
 		return false;
 	}
 
-	int bats() {
+	int bats(int balls) {
 		int cum0 = pZero;
 		int cum1 = cum0 + pOnes;
 		int cum4 = cum1 + pFours;
 		int cum6 = cum4 + pSixes;
 
-		ballsBatted++;
+		//ballsBatted++;
 		int rN = (rand() % cum6);
+
+		//powerplay
+		if (balls < 30) rN += 75;
+
 		if (rN <= cum0) {
 			return 0;
 		}
@@ -95,10 +99,10 @@ public:
 			return 1;
 		}
 		else if (rN <= cum4) {
-			foursScored++;
+			//foursScored++;
 			return 4;
 		}
-		sixesScored++;
+		//sixesScored++;
 		return 6;
 	}
 };
