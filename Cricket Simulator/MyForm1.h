@@ -94,14 +94,14 @@ namespace CricketSimulator {
 		{
 			for (int i = 0; i < t1->batting.size(); i++)
 			{
-				f1->listViewItem = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t1->batting[i].name));
-				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting[i].runsScored));
-				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting[i].wicketsTaken));
+				f1->listViewItem = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t1->batting.at(i)->name));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->runsScored));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->wicketsTaken));
 				f1->listView1->Items->Add(f1->listViewItem);
 
-				f1->listViewItem2 = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t2->batting[i].name));
-				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting[i].runsScored));
-				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting[i].wicketsTaken));
+				f1->listViewItem2 = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t2->batting.at(i)->name));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->runsScored));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->wicketsTaken));
 				f1->listView2->Items->Add(f1->listViewItem2);
 
 			}

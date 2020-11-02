@@ -67,6 +67,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="guicon.h" />
     <ClInclude Include="Match.h" />
     <ClInclude Include="MyForm1.h">
       <FileType>CppForm</FileType>
@@ -78,6 +79,7 @@
     <ClInclude Include="Team.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="guicon.cpp" />
     <ClCompile Include="Match.cpp" />
     <ClCompile Include="MyForm1.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>

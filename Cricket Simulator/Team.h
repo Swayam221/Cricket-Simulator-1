@@ -25,7 +25,7 @@ public:
 	string name;
 	int bowlerInd = -1;
 	int batsmanInd = -1;
-	vector <Player> batting;
+	vector <Player*> batting;
 	vector <Player*> bowling;
 
 	int runsScored = 0;
@@ -71,9 +71,9 @@ public:
 			stringstream temp7(temp);
 			temp7 >> wickets;
 
-			Player player(playerName, role, playerRuns, strikeRate, fours, sixes, balls, wickets);
+			Player* player=new Player(playerName, role, playerRuns, strikeRate, fours, sixes, balls, wickets);
 			batting.push_back(player);
-			if (player.canBall()) { bowling.push_back(&player); }
+			if (player->canBall()) { bowling.push_back(player); }
 		}
 
 
@@ -94,7 +94,7 @@ public:
 
 	Player* getBatsman() {
 		batsmanInd += 1;
-		Player* batsman = &batting.at(batsmanInd % batting.size());
+		Player* batsman = batting.at(batsmanInd % batting.size());
 		return batsman;
 	}
 
@@ -106,15 +106,15 @@ public:
 
 		for (int i = 0; i < 11; i++) {
 			//batsman
-			batting[i].foursScored = batting[i].foursScored / n;
-			batting[i].sixesScored = batting[i].sixesScored / n;
-			batting[i].runsScored = batting[i].runsScored / n;
-			batting[i].ballsBatted = batting[i].ballsBatted / n;
+			batting.at(i)->foursScored = batting.at(i)->foursScored / n;
+			batting.at(i)->sixesScored = batting.at(i)->sixesScored / n;
+			batting.at(i)->runsScored = batting.at(i)->runsScored / n;
+			batting.at(i)->ballsBatted = batting.at(i)->ballsBatted / n;
 
 			//bowler
-			batting[i].wicketsTaken = batting[i].wicketsTaken / n;
-			batting[i].ballsBowled = batting[i].ballsBowled / n;
-			batting[i].runsGiven = batting[i].runsGiven / n;
+			batting.at(i)->wicketsTaken = batting.at(i)->wicketsTaken / n;
+			batting.at(i)->ballsBowled = batting.at(i)->ballsBowled / n;
+			batting.at(i)->runsGiven = batting.at(i)->runsGiven / n;
 		}
 	}
 	int getAvgRunsScored(int n)

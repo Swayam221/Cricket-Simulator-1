@@ -43,9 +43,8 @@ public:
 					//cout << batsman1.name << " is batting" << "\n";
 
 				}
-
 				bowler = team1->getBowler();
-				//cout << bowler.name << " is bowling" << "\n";
+				cout << bowler->name << " is bowling" << "\n";
 
 			}
 			int runs = 0;
@@ -55,7 +54,7 @@ public:
 			{
 				bowler->ballsBowled++;
 				bowler->wicketsTaken++;
-				//cout << bowler.name << " outs " << curBatsman->name << "\n";
+				cout << bowler->name << " outs " << curBatsman->name << "\n";
 
 				curBatsman->ballsBatted++;
 				curBatsman = team2->getBatsman();
