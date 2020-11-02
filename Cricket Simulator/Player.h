@@ -2,6 +2,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <stdlib.h>
 #include <time.h>
 
 class Player
@@ -30,19 +31,30 @@ public:
 	std::string name;
 
 	//batsman
-	int foursScored = 0;
-	int sixesScored = 0;
-	int runsScored = 0;
-	int ballsBatted = 0;
+	int foursScored;
+	int sixesScored ;
+	int runsScored ;
+	int ballsBatted ;
 
 	//bowler
-	int wicketsTaken = 0;
-	int ballsBowled = 0;
-	int runsGiven = 0;
+	int wicketsTaken ;
+	int ballsBowled ;
+	int runsGiven ;
 
 	Player() {}
 
 	Player(std::string nm, std::string rol, int rns, float sr, int frs, int sxs, int bls, int wkts) {
+		//batsman
+		foursScored = 0;
+		sixesScored = 0;
+		runsScored = 0;
+		ballsBatted = 0;
+
+		//bowler
+		wicketsTaken = 0;
+		ballsBowled = 0;
+		runsGiven = 0;
+
 		name = nm;
 		role = rol;
 		totalRuns = rns;
@@ -85,12 +97,12 @@ public:
 		int cum1 = cum0 + pOnes;
 		int cum4 = cum1 + pFours;
 		int cum6 = cum4 + pSixes;
-
 		//ballsBatted++;
 		int rN = (rand() % cum6);
 
 		//powerplay
-		if (balls < 30) rN += 75;
+		if (balls < 30) 
+			rN += 75;
 
 		if (rN <= cum0) {
 			return 0;

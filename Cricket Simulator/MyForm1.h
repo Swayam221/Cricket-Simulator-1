@@ -1,4 +1,5 @@
 #pragma once
+#include "MyForm2.h"
 #include <string>
 #include <msclr\marshal_cppstd.h>
 #include "Player.h"
@@ -6,7 +7,7 @@
 #include "Team.h"
 #include "Match.h"
 #include <conio.h>
-
+#include <cstdlib>
 
 using namespace std;
 
@@ -44,7 +45,7 @@ namespace CricketSimulator {
 				delete components;
 			}
 		}
-		void testMatch(string t1, string t2,int n) {
+		void testMatch(string t1, string t2,int n,MyForm2^ f1) {
 			srand((unsigned)time(0));
 			Team mi(t1);
 			Team csk(t2);
@@ -54,6 +55,7 @@ namespace CricketSimulator {
 			Team* cskp = &csk;
 			Match match1(mip, cskp);
 			Match match2(cskp, mip);
+			srand(time(0));
 			for (int i = 0; i < n; i++){
 				match1.play();
 				match2.play();
@@ -73,7 +75,7 @@ namespace CricketSimulator {
 			//int score1 = match1.team2->getAvgRunsScored(n);
 
 			String ^ scor1 = System::Convert::ToString(score1);
-			label3->Text = scor1;
+			label4->Text = scor1;
 			//cout << match1.team1->runsScored << "\n";
 			/*cout << match1.team2->runsScored << "\n";*/ 
 			//cout << match1.team1->wicketsLost << "\n";
@@ -81,13 +83,32 @@ namespace CricketSimulator {
 
 			//int score2 = match2.team2->getAvgRunsScored(n);
 			String ^ scor2 = System::Convert::ToString(score2);
-			label4->Text = scor2;
-
+			label3->Text = scor2;
+			display(&mi, &csk, f1);
 			//	cout << match2.team1->runsScored << "\n";
 			/*cout << match2.team2->runsScored << "\n";*/ //label4->Text = msclr::interop::marshal_as<System::String ^>(t2);
 			//	cout << match2.team1->wicketsLost << "\n";
 			//cout << match2.team2->wicketsLost << "\n";
 		}
+		void display(Team* t1, Team* t2, MyForm2^ f1)
+		{
+			for (int i = 0; i < t1->batting.size(); i++)
+			{
+				f1->listViewItem = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t1->batting[i].name));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting[i].runsScored));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting[i].wicketsTaken));
+				f1->listView1->Items->Add(f1->listViewItem);
+
+				f1->listViewItem2 = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t2->batting[i].name));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting[i].runsScored));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting[i].wicketsTaken));
+				f1->listView2->Items->Add(f1->listViewItem2);
+
+			}
+		}
+
+
+
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::TextBox^  textBox2;
@@ -97,6 +118,7 @@ namespace CricketSimulator {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::TextBox^  textBox3;
+	private: System::Windows::Forms::Button^  button2;
 
 	protected:
 
@@ -122,6 +144,7 @@ namespace CricketSimulator {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -209,11 +232,22 @@ namespace CricketSimulator {
 			this->textBox3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
 			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(99, 227);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 9;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 262);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -231,6 +265,7 @@ namespace CricketSimulator {
 
 		}
 #pragma endregion
+		public:MyForm2^ f1; 
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 String ^ t1 = textBox1->Text;
 				 String ^ t2 = textBox2->Text;
@@ -238,7 +273,8 @@ namespace CricketSimulator {
 				 int n = System::Convert::ToInt32(t3);
 				 string team1 = msclr::interop::marshal_as<std::string>(t1);
 				 string team2 = msclr::interop::marshal_as<std::string>(t2);
-				 testMatch(team1, team2,n);
+				 f1 = gcnew MyForm2(this);
+				 testMatch(team1, team2,n,f1);
 				 
 	}
 	private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -249,6 +285,10 @@ namespace CricketSimulator {
 	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Hide();
+			 f1->ShowDialog();
 }
 };
 

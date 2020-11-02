@@ -26,7 +26,7 @@ public:
 	int bowlerInd = -1;
 	int batsmanInd = -1;
 	vector <Player> batting;
-	vector <Player> bowling;
+	vector <Player*> bowling;
 
 	int runsScored = 0;
 	int wicketsLost = 0;
@@ -73,7 +73,7 @@ public:
 
 			Player player(playerName, role, playerRuns, strikeRate, fours, sixes, balls, wickets);
 			batting.push_back(player);
-			if (player.canBall()) { bowling.push_back(player); }
+			if (player.canBall()) { bowling.push_back(&player); }
 		}
 
 
@@ -86,14 +86,16 @@ public:
 		runsScoredIn1Match = 0;
 	}
 
-	Player getBowler() {
-		bowlerInd += 1;
-		return bowling.at(bowlerInd % bowling.size());
+	Player* getBowler() {
+		bowlerInd += 1; 
+		Player* bowler = bowling.at(bowlerInd % bowling.size());
+		return bowler;
 	}
 
-	Player getBatsman() {
+	Player* getBatsman() {
 		batsmanInd += 1;
-		return batting.at(batsmanInd % batting.size());
+		Player* batsman = &batting.at(batsmanInd % batting.size());
+		return batsman;
 	}
 
 	void getAvgResults(int n) {

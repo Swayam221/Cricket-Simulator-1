@@ -17,29 +17,29 @@ public:
 
 	void play()
 	{
-		Player bowler;
+		Player* bowler = team1->getBowler();
 
-		Player batsman1 = team2->getBatsman();
+		Player* batsman1 = team2->getBatsman();
 		//cout << batsman1.name << " is batting" << "\n";
 
-		Player batsman2 = team2->getBatsman();
+		Player* batsman2 = team2->getBatsman();
 		//cout << batsman2.name << " is batting2" << "\n";
 
-		Player* curBatsman = &batsman2;
+		Player* curBatsman = batsman1;
 
 		for (int balls = 0; balls < 120 && team2->batsmanInd != team2->batting.size(); balls++)
 		{
-			if (balls % 6 == 0)
+			if (balls % 6 == 0 && balls!=0)
 			{
-				if (curBatsman == &batsman1)
+				if (curBatsman == batsman1)
 				{
-					curBatsman = &batsman2;
+					curBatsman = batsman2;
 					//cout << batsman2.name << " is batting" << "\n";
 
 				}
 				else
 				{
-					curBatsman = &batsman1;
+					curBatsman = batsman1;
 					//cout << batsman1.name << " is batting" << "\n";
 
 				}
@@ -51,14 +51,14 @@ public:
 			int runs = 0;
 			team2->ballsFaced++;
 
-			if (bowler.takesWicket())
+			if (bowler->takesWicket())
 			{
-				bowler.ballsBowled++;
-				bowler.wicketsTaken++;
+				bowler->ballsBowled++;
+				bowler->wicketsTaken++;
 				//cout << bowler.name << " outs " << curBatsman->name << "\n";
 
 				curBatsman->ballsBatted++;
-				*curBatsman = team2->getBatsman();
+				curBatsman = team2->getBatsman();
 				team2->wicketsLost++;
 			}
 			else
@@ -77,18 +77,18 @@ public:
 				team2->runsScoredIn1Match += runs;
 				
 				//bowler
-				bowler.ballsBowled++;
-				bowler.runsGiven += runs;
+				bowler->ballsBowled++;
+				bowler->runsGiven += runs;
 				//cout << curBatsman->name << " scores " << runs<<"\n";
 				if (runs == 1)
 				{
-					if (curBatsman == &batsman1)
+					if (curBatsman == batsman1)
 					{
-						curBatsman = &batsman2;
+						curBatsman = batsman2;
 					}
 					else
 					{
-						curBatsman = &batsman1;
+						curBatsman = batsman1;
 					}
 				}
 			}
