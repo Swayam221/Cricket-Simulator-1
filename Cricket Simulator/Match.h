@@ -25,7 +25,7 @@ public:
 		Player* batsman2 = team2->getBatsman();
 		//cout << batsman2.name << " is batting2" << "\n";
 
-		Player* curBatsman = batsman1;
+		Player* curBatsman = batsman2;
 
 		for (int balls = 0; balls < 120 && team2->batsmanInd != team2->batting.size(); balls++)
 		{
@@ -44,7 +44,7 @@ public:
 
 				}
 				bowler = team1->getBowler();
-				cout << bowler->name << " is bowling" << "\n";
+				//cout << bowler->name << " is bowling" << "\n";
 
 			}
 			int runs = 0;
@@ -54,11 +54,20 @@ public:
 			{
 				bowler->ballsBowled++;
 				bowler->wicketsTaken++;
-				cout << bowler->name << " outs " << curBatsman->name << "\n";
+				//cout << bowler->name << " outs " << curBatsman->name << "\n";
 
 				curBatsman->ballsBatted++;
-				curBatsman = team2->getBatsman();
+				if (curBatsman == batsman1){
+					batsman1 = team2->getBatsman();
+					curBatsman = batsman1;
+				}
+				else{
+					batsman2 = team2->getBatsman();
+					curBatsman = batsman2;
+				}
+
 				team2->wicketsLost++;
+				//cout << team2->runsScored << "-" << team2->wicketsLost << endl;
 			}
 			else
 			{
