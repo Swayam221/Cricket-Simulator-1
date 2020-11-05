@@ -51,6 +51,8 @@ namespace CricketSimulator {
 			Team csk(t2);
 			label1->Text = msclr::interop::marshal_as<System::String ^>(t1);
 			label2->Text = msclr::interop::marshal_as<System::String ^>(t2);
+			f1->label1->Text = msclr::interop::marshal_as<System::String ^>(t1);
+			f1->label2->Text = msclr::interop::marshal_as<System::String ^>(t2);
 			Team* mip = &mi;
 			Team* cskp = &csk;
 			Match match1(mip, cskp);
@@ -68,13 +70,14 @@ namespace CricketSimulator {
 			}
 			csk.getAvgResults(n);
 			mi.getAvgResults(n);
-
+			f1->label3->Text = System::Convert::ToString(mi.wins);
+			f1->label4->Text = System::Convert::ToString(csk.wins);
 			int score1 = match1.team2->runsScored;
 			int score2 = match2.team2->runsScored;
 
 			//int score1 = match1.team2->getAvgRunsScored(n);
 
-			String ^ scor1 = System::Convert::ToString(score1);
+			String ^ scor1 = System::Convert::ToString(score1) + "/" + System::Convert::ToString(csk.wicketsLost);
 			label4->Text = scor1;
 			//cout << match1.team1->runsScored << "\n";
 			/*cout << match1.team2->runsScored << "\n";*/ 
@@ -82,7 +85,7 @@ namespace CricketSimulator {
 			//cout << match1.team2->wicketsLost << "\n";
 
 			//int score2 = match2.team2->getAvgRunsScored(n);
-			String ^ scor2 = System::Convert::ToString(score2);
+			String ^ scor2 = System::Convert::ToString(score2) + "/" + System::Convert::ToString(mi.wicketsLost);
 			label3->Text = scor2;
 			display(&mi, &csk, f1);
 			//	cout << match2.team1->runsScored << "\n";
@@ -97,11 +100,21 @@ namespace CricketSimulator {
 				f1->listViewItem = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t1->batting.at(i)->name));
 				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->runsScored));
 				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->wicketsTaken));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->ballsBatted));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->ballsBowled));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->foursScored));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->sixesScored));
+				f1->listViewItem->SubItems->Add(System::Convert::ToString(t1->batting.at(i)->runsGiven));
 				f1->listView1->Items->Add(f1->listViewItem);
 
 				f1->listViewItem2 = gcnew Windows::Forms::ListViewItem(msclr::interop::marshal_as<System::String ^>(t2->batting.at(i)->name));
 				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->runsScored));
 				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->wicketsTaken));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->ballsBatted));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->ballsBowled));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->foursScored));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->sixesScored));
+				f1->listViewItem2->SubItems->Add(System::Convert::ToString(t2->batting.at(i)->runsGiven));
 				f1->listView2->Items->Add(f1->listViewItem2);
 
 			}
@@ -153,7 +166,7 @@ namespace CricketSimulator {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(96, 31);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
+			this->button1->Text = L"Simulate";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -181,18 +194,18 @@ namespace CricketSimulator {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(53, 170);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(35, 13);
+			this->label1->Size = System::Drawing::Size(40, 13);
 			this->label1->TabIndex = 3;
-			this->label1->Text = L"label1";
+			this->label1->Text = L"Team1";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(196, 170);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(35, 13);
+			this->label2->Size = System::Drawing::Size(40, 13);
 			this->label2->TabIndex = 4;
-			this->label2->Text = L"label2";
+			this->label2->Text = L"Team2";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
 			// 
 			// label3
@@ -200,18 +213,18 @@ namespace CricketSimulator {
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(53, 205);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(35, 13);
+			this->label3->Size = System::Drawing::Size(41, 13);
 			this->label3->TabIndex = 5;
-			this->label3->Text = L"label3";
+			this->label3->Text = L"Score1";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(196, 205);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(35, 13);
+			this->label4->Size = System::Drawing::Size(41, 13);
 			this->label4->TabIndex = 6;
-			this->label4->Text = L"label4";
+			this->label4->Text = L"Score2";
 			// 
 			// label5
 			// 
@@ -238,7 +251,7 @@ namespace CricketSimulator {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 9;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"ScoreCard";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 

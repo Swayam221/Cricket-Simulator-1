@@ -102,7 +102,7 @@ public:
 		runsScored = runsScored / n;
 		wicketsLost = wicketsLost / n;
 		ballsFaced = ballsFaced / n;
-		wins = wins / n;
+		wins = (wins / n)*100;
 
 		for (int i = 0; i < 11; i++) {
 			//batsman
