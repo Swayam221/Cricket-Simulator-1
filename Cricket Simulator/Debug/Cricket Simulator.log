@@ -1,0 +1,32 @@
+﻿Build started 11/16/2020 4:18:04 PM.
+     1>Project "C:\Users\user\Desktop\Cricket-Simulator-fourthAvgBranch\Cricket-Simulator-fourthAvgBranch\Cricket Simulator\Cricket Simulator.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         G:\Visual Studio Ultimate\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm1.cpp
+         MyForm1.cpp
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(66): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(67): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(68): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(70): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(71): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(74): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(96): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(97): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(98): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\Player.h(99): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\MyForm1.h(60): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\user\desktop\cricket-simulator-fourthavgbranch\cricket-simulator-fourthavgbranch\cricket simulator\MyForm1.h(98): warning C4018: '<' : signed/unsigned mismatch
+     1>MyForm1.cpp(7): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+       Link:
+         G:\Visual Studio Ultimate\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\Desktop\Cricket-Simulator-fourthAvgBranch\Cricket-Simulator-fourthAvgBranch\Debug\Cricket Simulator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\CricketSimulator.MyForm1.resources /ASSEMBLYRESOURCE:Debug\CricketSimulator.MyForm2.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\Desktop\Cricket-Simulator-fourthAvgBranch\Cricket-Simulator-fourthAvgBranch\Debug\Cricket Simulator.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\Desktop\Cricket-Simulator-fourthAvgBranch\Cricket-Simulator-fourthAvgBranch\Debug\Cricket Simulator.lib" /MACHINE:X86 Debug\guicon.obj
+         Debug\Match.obj
+         Debug\MyForm1.obj
+         Debug\MyForm2.obj
+         Debug\Player.obj
+         Debug\Team.obj
+         Debug\Tester.obj
+         Cricket Simulator.vcxproj -> C:\Users\user\Desktop\Cricket-Simulator-fourthAvgBranch\Cricket-Simulator-fourthAvgBranch\Debug\Cricket Simulator.exe
+     1>Done Building Project "C:\Users\user\Desktop\Cricket-Simulator-fourthAvgBranch\Cricket-Simulator-fourthAvgBranch\Cricket Simulator\Cricket Simulator.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.29
